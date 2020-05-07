@@ -26,7 +26,7 @@ This task is initiated when any changes is commited to **test** branch. The comm
 1. Now in the ***Add behavior*** field, select **merge before build***. Here set name of repository as **origin** and branch to merge as **master** or whatever branch you want to merge with.
 1. In ***build trigger*** section, select ***Trigger builds remotely***. Set some authentication token. In ***Post-build Actions*** section, select ***Build other project***. In ***project to build*** field add **publish**. Save and close it.
 
-### 3. Publishing data to deploymeny sever
+### 3. Publishing data to production sever
 This task is initiated sfter the merge has been completed. This task will clone master branch and deployed on an new/exeisting container on production server.
 1. Create task as explained earlier. Go to ***Source Code Management*** and select git and enter your repository url.
 1. Select ***Branch*** as **master**.Select poll scm in ***Build trigger*** section. Now navigate to ***build*** section and select ***Execute shell***. Here copy paste the contents of __production_env.sh__.
